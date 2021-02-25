@@ -54,6 +54,7 @@
       border-top: 1px solid rgb(71, 71, 71);
       border-bottom: 1px solid rgb(71, 71, 71);
       .video-container__creator-avatar {
+        object-fit: cover;
         height: 50px;
         width: 50px;
         border-radius: 25px;

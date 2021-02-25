@@ -21,6 +21,7 @@
         margin-top: 1.5vh;
         display: flex;
         .video-container__creator-avatar {
+          object-fit: cover;
           margin-right: 0.1vw;
           width: 7.5vh;
           height: 7.5vh;

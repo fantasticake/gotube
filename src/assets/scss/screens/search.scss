@@ -43,6 +43,7 @@
             display: flex;
             align-items: center;
             .video-container__creator-avatar {
+              object-fit: cover;
               width: 30px;
               height: 30px;
               border-radius: 15px;
