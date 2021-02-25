@@ -115,8 +115,27 @@ export const facebookAuthenticate = async (
   profile,
   done
 ) => {
+  const { id, displayName: name, profileUrl: avatarUrl, email } = profile;
   console.log(profile);
-  /* login user with facebook */
+  try {
+    const user = await User.findOne({ email });
+    if (user) {
+      user.facebookId = id;
+      await User.findOneAndUpdate({ email });
+      done(null, user);
+    } else {
+      const newUser = await User.create({
+        name,
+        email,
+        avatarUrl,
+        githubId: id,
+      });
+      done(null, newUser);
+    }
+  } catch (error) {
+    console.log(error);
+    done(error);
+  }
 };
 
 export const handlelogout = (req, res) => {
