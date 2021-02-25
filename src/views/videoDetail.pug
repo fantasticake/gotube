@@ -46,6 +46,9 @@ block content
                     span  comments
                 if curUser
                     form.video-container__comment-form
+                        .curuser(hidden)
+                            .name(hidden id=curUser.name)
+                            .avatarurl(hidden id=curUser.avatarUrl)
                         input(placeholder="Add a public comment...").video-container__comment-input
                         button.video-container__comment-button comment
             .video-container__comments

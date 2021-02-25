@@ -52,13 +52,11 @@ const fakeAddComment = (text) => {
   commentControls.classList.add("comment-controls");
   commentdelete.classList.add("comment-delete");
 
-  const curAvatar = document.querySelector(".video-container__creator-avatar")[
-    "src"
-  ];
-  const curUsername = document.querySelector(".video-container__creator-name")
-    .innerHTML;
+  const curUser = document.querySelector(".curuser");
+  const curUsername = curUser.querySelector(".name")["id"];
+  const curAvatarUrl = curUser.querySelector(".avatarurl")["id"];
   const curDate = new Date();
-  commentAvatarImg["src"] = curAvatar;
+  if (curAvatarUrl) commentAvatarImg["src"] = curAvatarUrl;
   commentCreatorName.innerHTML = curUsername;
   commentMonth.innerText = curDate.getMonth() + 1;
   commentDate.innerText = curDate.getDate();
@@ -116,7 +114,6 @@ const init = () => {
     ".video-container__comment-form"
   );
   commentForm.addEventListener("submit", handleAddComment);
-
   const commentDeleteButtons = videoContainer.querySelectorAll(
     ".comment-delete"
   );
