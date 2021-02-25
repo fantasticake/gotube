@@ -82,10 +82,8 @@ export const githubAuthenticate = async (
     _json: { id, login: name, avatar_url: avatarUrl, email },
   } = profile;
 
+  console.log(profile);
   try {
-    if (!email) {
-      throw "No email!";
-    }
     const user = await User.findOne({ email });
     if (user) {
       user.githubId = id;
@@ -127,7 +125,6 @@ export const facebookAuthenticate = async (
   } = profile;
   const name = first_name.concat(" ", last_name);
 
-  console.log(profile);
   try {
     const user = await User.findOne({ email });
     if (user) {
