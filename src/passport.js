@@ -20,7 +20,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      callbackURL: `http://localhost:8000${routes.googleCallback}`,
+      callbackURL: `${process.env.SITE_URL}${routes.googleCallback}`,
     },
     googleAuthenticate
   )
@@ -31,7 +31,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
-      callbackURL: `http://localhost:8000${routes.githubCallback}`,
+      callbackURL: `${process.env.SITE_URL}${routes.githubCallback}`,
     },
     githubAuthenticate
   )
@@ -42,7 +42,7 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET,
-      callbackURL: `http://localhost:8000${routes.facebookCallback}`,
+      callbackURL: `${process.env.SITE_URL}${routes.facebookCallback}`,
     },
     facebookAuthenticate
   )
