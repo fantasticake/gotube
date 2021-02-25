@@ -122,10 +122,11 @@ export const facebookAuthenticate = async (
 ) => {
   const {
     id,
-    displayName: name,
     profileUrl: avatarUrl,
-    _json: { email },
+    _json: { email, first_name, last_name },
   } = profile;
+  const name = first_name.concat(" ", last_name);
+
   console.log(profile);
   try {
     const user = await User.findOne({ email });
