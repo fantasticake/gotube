@@ -83,6 +83,9 @@ export const githubAuthenticate = async (
   } = profile;
 
   try {
+    if (!email) {
+      throw "No email!";
+    }
     const user = await User.findOne({ email });
     if (user) {
       user.githubId = id;
@@ -99,7 +102,6 @@ export const githubAuthenticate = async (
     }
   } catch (error) {
     console.log(error);
-    alert("No emails in your Social Account.");
     done(error);
   }
 };
@@ -118,7 +120,12 @@ export const facebookAuthenticate = async (
   profile,
   done
 ) => {
-  const { id, displayName: name, profileUrl: avatarUrl, email } = profile;
+  const {
+    id,
+    displayName: name,
+    profileUrl: avatarUrl,
+    _json: { email },
+  } = profile;
   console.log(profile);
   try {
     const user = await User.findOne({ email });
