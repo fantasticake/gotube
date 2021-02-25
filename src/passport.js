@@ -43,7 +43,7 @@ passport.use(
       clientID: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET,
       callbackURL: `${process.env.SITE_URL}${routes.facebookCallback}`,
-      profileFields: ['id', 'displayName', 'profileUrl', 'email'];
+      profileFields: ["id", "displayName", "profileUrl", "email"],
     },
     facebookAuthenticate
   )
