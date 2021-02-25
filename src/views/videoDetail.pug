@@ -2,7 +2,7 @@ extends layouts/main.pug
 
 block content
     .videodetail-video-container
-        video(src="/"+video.path controls).video-container__video
+        video(src="/"+video.path controls autoplay).video-container__video
         .video-container__info-box
             .video-container__title-controls-box
                 h2.video-container__title=video.title
