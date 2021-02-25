@@ -82,8 +82,8 @@ export const githubAuthenticate = async (
     _json: { id, login: name, avatar_url: avatarUrl, email },
   } = profile;
 
-  console.log(profile);
   try {
+    if (!email) throw "No emails!";
     const user = await User.findOne({ email });
     if (user) {
       user.githubId = id;
