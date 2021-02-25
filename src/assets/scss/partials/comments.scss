@@ -1,19 +1,19 @@
 .video-container__comments-box {
   .video-container__comments-info {
-    margin-top: 4.5vh;
-    font-size: 3vh;
+    margin-top: 30px;
+    font-size: 20px;
     .video-container__comment-form {
       cursor: pointer;
       &:focus-within .video-container__comment-button {
         visibility: visible;
         margin-top: 0px;
       }
-      margin-top: 3vh;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       .video-container__comment-input {
-        height: 4.5vh;
-        margin-bottom: 1.5vh;
+        height: 30px;
+        margin-bottom: 10px;
         color: white;
         background-color: #181818;
         border: none;
@@ -22,7 +22,7 @@
         transition: border 0.3s ease-in-out;
         &::placeholder {
           color: rgb(185, 185, 185);
-          font-size: 2.2vh;
+          font-size: 15px;
         }
         &:focus {
           border-bottom: 1px solid #121212;
@@ -30,60 +30,60 @@
       }
       .video-container__comment-button {
         cursor: pointer;
-        margin-top: -3vh;
+        margin-top: -20px;
         visibility: hidden;
         align-self: flex-end;
-        height: 5vh;
-        width: 17vh;
+        height: 25px;
+        width: 120px;
         background-color: #606060;
         border: none;
         text-transform: uppercase;
-        font-size: 2vh;
+        font-size: 14px;
       }
     }
   }
   .video-container__comments {
     .comment-container {
-      margin-top: 4.5vh;
+      margin-top: 30px;
       display: flex;
       .creator-avatar {
         img {
-          width: 6vh;
-          height: 6vh;
-          border-radius: 3vh;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
           object-fit: cover;
         }
       }
       .comment-info {
-        margin-left: 2vh;
+        margin-left: 14px;
         .comment-creator-date-box {
           display: flex;
-          gap: 1.5vh;
+          gap: 10px;
           .comment-creator__name {
             color: white;
-            font-size: 2.2vh;
+            font-size: 15px;
           }
           .comment-date {
             display: flex;
-            gap: 0.5vh;
+            gap: 3px;
             color: rgb(185, 185, 185);
-            font-size: 2.2vh;
+            font-size: 15px;
           }
         }
         .comment-text {
-          margin-top: 1vh;
-          font-size: 2.3vh;
+          margin-top: 5px;
+          font-size: 17px;
         }
         .comment-controls {
-          margin-top: 2vh;
+          margin-top: 15px;
           .comment-delete {
             cursor: pointer;
             font-weight: bold;
-            padding: 1vh 2vh;
+            padding: 7px 14px;
             background-color: #606060;
             border: none;
             text-transform: uppercase;
-            font-size: 1.5vh;
+            font-size: 10px;
           }
         }
       }
