@@ -10,9 +10,11 @@
   align-items: center;
   div {
     a {
-      display: block;
-      height: 30px;
-      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      width: 300px;
       border-radius: 10px;
       color: white;
       transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;

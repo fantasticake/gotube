@@ -103,7 +103,9 @@ export const githubAuthenticate = async (
   }
 };
 
-export const handleFacebookLogin = passport.authenticate("facebook");
+export const handleFacebookLogin = passport.authenticate("facebook", {
+  scope: ["email"],
+});
 
 export const handleFacebookCallback = passport.authenticate("facebook", {
   failureRedirect: routes.login,
