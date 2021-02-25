@@ -1,0 +1,12 @@
+extends layouts/main.pug
+
+block content
+    .join-container
+        form(action=routes.join, method="post").join-form
+            input(type="text" required name="name" placeholder="name").join-form__name
+            input(type="text" required name="email" placeholder="email").join-form__email
+            input(type="password" required name="password", placeholder="password").join-form__password
+            input(type="password" required name="password2" placeholder="password again").join-form__password2
+            button.join-form__button Join
+        .join-social
+            include partials/socialLogin

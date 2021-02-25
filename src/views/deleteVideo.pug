@@ -1,0 +1,6 @@
+extends layouts/main.pug
+
+block content
+    .deletevideo
+        form(action="/videos"+routes.deleteVideo(videoId) method="post").deletevideo-form
+            button.deletevideo-form__button Delete Video

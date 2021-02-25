@@ -1,0 +1,64 @@
+.join-container {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .join-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            text-align: center;
+            border: none;
+            margin-bottom: 10px;
+            height: 40px;
+            width: 300px;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: opacity 0.1s ease-in-out;
+            &:focus {
+                opacity: 0.9;
+            }
+            outline-color: lightblue;
+        }
+        input::placeholder {
+            text-align: center;
+            color: rgb(218, 218, 218);
+            font-size: 17px;
+        }
+        .join-form__name {
+            background-color: #4286f4ea;
+        }
+        .join-form__email {
+            background-color: #ea4435e5;
+        }
+        .join-form__password {
+            background-color: #fbbd04ea;
+        }
+        .join-form__password2 {
+            background-color: #4286f4e3;
+        }
+        .join-form__button {
+            border: none;
+            margin-top: 20px;
+            background-color: #34a853;
+            color: rgb(236, 236, 236);
+            font-size: 15px;
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            transition: opacity 0.1s ease-in-out, transform 0.2s ease-in-out;
+            &:hover {
+                opacity: 0.9;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .join-social {
+        margin-top: 10px;
+    }
+}

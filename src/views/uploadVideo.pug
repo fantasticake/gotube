@@ -1,0 +1,9 @@
+extends layouts/main.pug
+
+block content
+    .uploadvideo
+        form(action="/videos"+routes.uploadVideo, method="post" enctype="multipart/form-data").uploadvideo-form
+            input(type="file" required name="video" id="video" accept="video/*").uploadvideo-form__video
+            input(type="text" required name="title" placeholder="title").uploadvideo-form__title
+            textarea(name="description" placeholder="description").uploadvideo-form__description
+            button.uploadvideo-form__button Upload

@@ -1,0 +1,88 @@
+.videodetail-video-container {
+  width: 65vw;
+  height: 100%;
+  padding-left: 30px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  .video-container__video {
+    width: 100%;
+    outline: none;
+  }
+  .video-container__info-box {
+    .video-container__title-controls-box {
+      display: grid;
+      grid-template-columns: 80% auto;
+      margin-top: 10px;
+      .video-container__title {
+        word-wrap: break-word;
+        font-size: 30px;
+        color: rgb(238, 238, 238);
+      }
+      .video-container__controls {
+        margin-top: 20px;
+        text-align: end;
+        .video-container__controls__edit {
+          transition: transform 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+          a {
+            margin-right: 10px;
+            padding: 7px 16px;
+            background-color: #4286f4ea;
+            color: white;
+            font-size: 17px;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+    .video-container__views-date-box {
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+      color: rgb(185, 185, 185);
+    }
+    .video-container__info-avatar-box {
+      display: flex;
+      margin-top: 20px;
+      padding: 20px 0;
+      border-top: 1px solid rgb(71, 71, 71);
+      border-bottom: 1px solid rgb(71, 71, 71);
+      .video-container__creator-avatar {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+      }
+      .video-container__creator-text-box {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        .video-container__creator-info {
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2px;
+          .video-container__creator-name {
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: rgb(240, 240, 240);
+          }
+          .video-container__subscribers {
+            font-size: 15px;
+            color: rgb(185, 185, 185);
+          }
+        }
+        .video-container__text_box {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

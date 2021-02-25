@@ -1,0 +1,25 @@
+header.header
+    .header__column
+        a(href=routes.home).header__column-home
+            span.header__column-icon
+                i(class="fab fa-youtube")
+                    div
+            span.header__column-title
+                span G
+                span o
+                span T
+                span u
+                span b
+                span e
+    .header__column
+        form(action=routes.search method="get").header__column-form
+            input(name="searchingBy" placeholder="Search").header__column-input
+            button <i class="fas fa-search"></i>
+    .header__column
+        if(curUser)
+            a(href="/users"+routes.userDetail(curUser.id)).header__column-profile
+                <i class="far fa-user-circle"></i>
+            a(href=routes.logout).header__column-logout LogOut
+        else
+            a(href=routes.join).header__column-join Join
+            a(href=routes.login).header__column-login Login

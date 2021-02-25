@@ -1,0 +1,10 @@
+footer.footer {
+  height: $footer-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid rgba(165, 165, 165, 0.3);
+  color: rgba(204, 204, 204, 0.9);
+  font-size: 2vh;
+  background-color: #202020;
+}

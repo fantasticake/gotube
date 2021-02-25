@@ -1,0 +1,24 @@
+/* variavles */
+@import "variables.scss";
+
+/* layouts */
+@import "layouts/main.scss";
+
+/* partials */
+@import "partials/header.scss";
+@import "partials/footer.scss";
+@import "partials/sociallogin.scss";
+@import "partials/comments.scss";
+
+/* screens */
+@import "screens/home.scss";
+@import "screens/search.scss";
+@import "screens/join.scss";
+@import "screens/login.scss";
+@import "screens/userDetail.scss";
+@import "screens/editProfile.scss";
+@import "screens/changePassword.scss";
+@import "screens/uploadVideo.scss";
+@import "screens/videoDetail.scss";
+@import "screens/editVideo.scss";
+@import "screens/deleteVideo.scss";

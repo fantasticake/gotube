@@ -1,0 +1,14 @@
+extends layouts/main.pug
+
+block content
+    .editprofile
+        form(action="/users"+routes.editProfile(curUser.id), method="post" enctype="multipart/form-data").editprofile-form
+            .editprofile-form__avatar
+                label(for="avatar") Profile Image
+                input(type="file" required name="avatar" id="avatar" accept="image/*")
+            .editprofile-form__name
+                label(for="username") Name
+                input(type="text" required name="name" value=curUser.name id="username")
+            button.editprofile-form__button Save
+        .editprofile-changepassword
+            a(href="/users"+routes.changePassword(curUser.id)) Change Password

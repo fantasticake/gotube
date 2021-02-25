@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #202020;
+  color: white;
+  main {
+    height: 100%;
+    margin-top: $header-height;
+  }
+}

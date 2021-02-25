@@ -1,0 +1,8 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+block content
+    .home
+        .home-videos
+            each video in videos.reverse()
+                +videoBlock(video)

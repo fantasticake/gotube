@@ -1,0 +1,92 @@
+.video-container__comments-box {
+  .video-container__comments-info {
+    margin-top: 4.5vh;
+    font-size: 3vh;
+    .video-container__comment-form {
+      cursor: pointer;
+      &:focus-within .video-container__comment-button {
+        visibility: visible;
+        margin-top: 0px;
+      }
+      margin-top: 3vh;
+      display: flex;
+      flex-direction: column;
+      .video-container__comment-input {
+        height: 4.5vh;
+        margin-bottom: 1.5vh;
+        color: white;
+        background-color: #181818;
+        border: none;
+        border-bottom: 1px solid #5d5d5d9a;
+        outline: none;
+        transition: border 0.3s ease-in-out;
+        &::placeholder {
+          color: rgb(185, 185, 185);
+          font-size: 2.2vh;
+        }
+        &:focus {
+          border-bottom: 1px solid #121212;
+        }
+      }
+      .video-container__comment-button {
+        cursor: pointer;
+        margin-top: -3vh;
+        visibility: hidden;
+        align-self: flex-end;
+        height: 5vh;
+        width: 17vh;
+        background-color: #606060;
+        border: none;
+        text-transform: uppercase;
+        font-size: 2vh;
+      }
+    }
+  }
+  .video-container__comments {
+    .comment-container {
+      margin-top: 4.5vh;
+      display: flex;
+      .creator-avatar {
+        img {
+          width: 6vh;
+          height: 6vh;
+          border-radius: 3vh;
+          object-fit: cover;
+        }
+      }
+      .comment-info {
+        margin-left: 2vh;
+        .comment-creator-date-box {
+          display: flex;
+          gap: 1.5vh;
+          .comment-creator__name {
+            color: white;
+            font-size: 2.2vh;
+          }
+          .comment-date {
+            display: flex;
+            gap: 0.5vh;
+            color: rgb(185, 185, 185);
+            font-size: 2.2vh;
+          }
+        }
+        .comment-text {
+          margin-top: 1vh;
+          font-size: 2.3vh;
+        }
+        .comment-controls {
+          margin-top: 2vh;
+          .comment-delete {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 1vh 2vh;
+            background-color: #606060;
+            border: none;
+            text-transform: uppercase;
+            font-size: 1.5vh;
+          }
+        }
+      }
+    }
+  }
+}

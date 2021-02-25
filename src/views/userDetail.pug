@@ -1,0 +1,26 @@
+extends layouts/main.pug
+include mixins/videoBlock
+
+block content
+    .profile
+        .profile__info-controls-box
+            .profile__info
+                .profile__info-avatar
+                    img(src=user.avatarUrl).profile-image
+                .profile__info-text
+                    h2.profile-name=user.name
+                    h3.profile-subscribers=user.subscribers
+                        if user.subscribers == 1
+                            span  subscriber
+                        else
+                            span  subscribers
+            .profile__controls
+                if curUser && curUser.id == user.id
+                    .profile__controls-uploadvideo
+                        a(href="/videos"+routes.uploadVideo) Upload Video
+                    .profile__controls-editprofile
+                        a(href="/users"+routes.editProfile(curUser.id)) Edit Profile
+        .profile__videos-container
+            .profile__videos
+                each video in user.videos.reverse()
+                    +profileVideoBlock(video)

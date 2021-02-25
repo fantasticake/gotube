@@ -1,0 +1,14 @@
+extends layouts/main.pug
+
+block content
+    .editvideo
+        form(action="/videos"+routes.editVideo(video.id) method="post").editvideo-form
+            .editvideo-form__title
+                label(for="editvideo-title") Title
+                input(type="text" required name="title" value=video.title id="editvideo-title")
+            .editvideo-form__description
+                label(for="editvideo-description") Description
+                textarea(required name="description" id="editvideo-description")=video.description
+            button.editprofile-form__button Save
+        .editvideo-delete
+            a(href="/videos"+routes.deleteVideo(video.id)) delete video

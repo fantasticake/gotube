@@ -1,0 +1,70 @@
+mixin videoBlock(video)
+    .video-container
+        a(href="/videos"+routes.videoDetail(video.id))
+            video(src="/"+video.path).video-container__video
+        .video-container__info-avatar-box
+            a(href="/users"+routes.userDetail(video.creator.id))
+                img(src=video.creator.avatarUrl).video-container__creator-avatar
+            .video-container__info
+                a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
+                a(href="/users"+routes.userDetail(video.creator.id))
+                    h3.video-container__creator-name=video.creator.name
+                .video-container__views-date-box
+                    span.video-container__views=video.views
+                    if video.views == 1
+                        span  view
+                    else
+                        span  views
+                    span •
+                    span.video-container__date
+                        span.video-container__date-month=video.createdAt.getMonth()+1
+                        | 
+                        span.video-container__date-date=video.createdAt.getDate()
+                        | 
+                        span.video-container__date-year=video.createdAt.getFullYear()
+
+mixin videoDetailBlock(video)
+    .video-container
+        a(href="/videos"+routes.videoDetail(video.id))
+            video(src="/"+video.path).video-container__video
+        .video-container__info-box
+            a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
+            .video-container__views-date-box
+                span.video-container__views=video.views
+                    if video.views == 1
+                        span  view
+                    else
+                        span  views
+                span •
+                span.video-container__date
+                    span.video-container__date-month=video.createdAt.getMonth()+1
+                    | 
+                    span.video-container__date-date=video.createdAt.getDate()
+                    | 
+                    span.video-container__date-year=video.createdAt.getFullYear()
+            .video-container__creator-text-box
+                a(href="/users"+routes.userDetail(video.creator.id)).video-container__creator
+                    img(src=video.creator.avatarUrl).video-container__creator-avatar
+                    span.video-container__creator-name=video.creator.name
+                .video-container__text_box
+                    .video-container__description=video.description
+
+mixin profileVideoBlock(video)
+    .video-container
+        a(href="/videos"+routes.videoDetail(video.id))
+            video(src="/"+video.path).video-container__video
+        .video-container__info
+            a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
+            .video-container__views-date-box
+                span.video-container__views=video.views
+                if video.views == 1
+                    span  view
+                else
+                    span  views
+                span •
+                span.video-container__date
+                    span.video-container__date-month=video.createdAt.getMonth()+1
+                    | 
+                    span.video-container__date-date=video.createdAt.getDate()
+                    | 
+                    span.video-container__date-year=video.createdAt.getFullYear()

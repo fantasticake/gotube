@@ -1,0 +1,10 @@
+extends layouts/main.pug
+
+block content
+    .login-container
+        form(action=routes.login, method="post").login-form
+            input(type="text" required name="email" placeholder="email").login-form__email
+            input(type="password" required name="password", placeholder="password").login-form__password
+            button.login-form__button login
+        .login-social
+            include partials/socialLogin

@@ -1,0 +1,21 @@
+.deletevideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .deletevideo-form {
+        margin: 100px 0;
+        .deletevideo-form__button {
+            width: 200px;
+            height: 50px;
+            text-transform: uppercase;
+            background-color: #ea4435e5;
+            color: white;
+            border: none;
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 1px 1px 20px rgb(112, 37, 23);
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
