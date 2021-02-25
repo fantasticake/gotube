@@ -99,6 +99,7 @@ export const githubAuthenticate = async (
     }
   } catch (error) {
     console.log(error);
+    alert("No emails in your Social Account.");
     done(error);
   }
 };
@@ -130,7 +131,7 @@ export const facebookAuthenticate = async (
         name,
         email,
         avatarUrl,
-        githubId: id,
+        facebookId: id,
       });
       done(null, newUser);
     }
