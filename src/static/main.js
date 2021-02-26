@@ -3476,6 +3476,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 
 /***/ }),
 
+/***/ "./assets/js/hoverVideo.js":
+/*!*********************************!*\
+  !*** ./assets/js/hoverVideo.js ***!
+  \*********************************/
+/***/ (() => {
+
+eval("var hoverPlayVideo = document.querySelector(\".hover-play\");\n\nvar handleMouseover = function handleMouseover(event) {\n  var video = event.target;\n  video.muted = true;\n  video.play();\n};\n\nvar handleMouseout = function handleMouseout(event) {\n  var video = event.target;\n  video.pause();\n  video.currentTime = 0;\n};\n\nvar handleEnded = function handleEnded(event) {\n  var video = event.target;\n  video.currentTime = 0;\n  video.play();\n};\n\nvar init = function init() {\n  var videos = document.querySelectorAll(\".hover-play\");\n  videos.forEach(function (video) {\n    video.addEventListener(\"mouseover\", handleMouseover);\n    video.addEventListener(\"mouseout\", handleMouseout);\n    video.addEventListener(\"ended\", handleEnded);\n  });\n};\n\nif (hoverPlayVideo) {\n  init();\n}\n\n//# sourceURL=webpack:///./assets/js/hoverVideo.js?");
+
+/***/ }),
+
 /***/ "./assets/js/main.js":
 /*!***************************!*\
   !*** ./assets/js/main.js ***!
@@ -3483,7 +3493,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ \"./assets/scss/styles.scss\");\n/* harmony import */ var _videoPlayer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./videoPlayer.js */ \"./assets/js/videoPlayer.js\");\n/* harmony import */ var _comment_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comment.js */ \"./assets/js/comment.js\");\n/* css */\n\n/* js */\n\n\n\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ \"./assets/scss/styles.scss\");\n/* harmony import */ var _videoPlayer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./videoPlayer.js */ \"./assets/js/videoPlayer.js\");\n/* harmony import */ var _comment_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./comment.js */ \"./assets/js/comment.js\");\n/* harmony import */ var _hoverVideo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hoverVideo */ \"./assets/js/hoverVideo.js\");\n/* harmony import */ var _hoverVideo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_hoverVideo__WEBPACK_IMPORTED_MODULE_3__);\n/* css */\n\n/* js */\n\n\n\n\n\n//# sourceURL=webpack:///./assets/js/main.js?");
 
 /***/ }),
 

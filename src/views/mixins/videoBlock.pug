@@ -1,7 +1,7 @@
 mixin videoBlock(video)
     .video-container
         a(href="/videos"+routes.videoDetail(video.id))
-            video(src="/"+video.path).video-container__video
+            video(src="/"+video.path).video-container__video.hover-play
         .video-container__info-avatar-box
             a(href="/users"+routes.userDetail(video.creator.id))
                 img(src=video.creator.avatarUrl).video-container__creator-avatar
@@ -23,10 +23,10 @@ mixin videoBlock(video)
                         | 
                         span.video-container__date-year=video.createdAt.getFullYear()
 
-mixin videoDetailBlock(video)
+mixin searchVideoBlock(video)
     .video-container
         a(href="/videos"+routes.videoDetail(video.id))
-            video(src="/"+video.path).video-container__video
+            video(src="/"+video.path).video-container__video.hover-play
         .video-container__info-box
             a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
             .video-container__views-date-box
@@ -52,7 +52,7 @@ mixin videoDetailBlock(video)
 mixin profileVideoBlock(video)
     .video-container
         a(href="/videos"+routes.videoDetail(video.id))
-            video(src="/"+video.path).video-container__video
+            video(src="/"+video.path).video-container__video.hover-play
         .video-container__info
             a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
             .video-container__views-date-box
