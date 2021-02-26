@@ -19,7 +19,9 @@
       }
       .video-container__video {
         max-width: 90vw;
+        object-fit: cover;
         width: 400px;
+        height: 220px;
       }
       .video-container__info-box {
         word-wrap: break-word;
