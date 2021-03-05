@@ -1,121 +1,129 @@
 header.header {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #202020;
-  border-bottom: 0.5px solid rgba(179, 179, 179, 0.2);
-  padding: 0 3vw;
-  height: $header-height;
-  display: flex;
-  justify-content: center;
-  .header__column {
-    width: 33%;
-    font-size: 4vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #202020;
+    border-bottom: 0.5px solid rgba(179, 179, 179, 0.2);
+    padding: 0 3vw;
+    height: $header-height;
     display: flex;
-    align-items: center;
-  }
-  .header__column:first-child {
-    a {
-      color: white;
-      display: flex;
-      align-items: center;
-      i {
-        position: relative;
-        color: #ff0000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div {
-          z-index: -1;
-          position: absolute;
-          height: 2vh;
-          width: 2vh;
-          background-color: white;
-        }
-      }
-      .header__column-title {
-        margin-left: 0.2vw;
-        letter-spacing: -0.2vw;
-        span:first-child {
-          color: #4285f4;
-        }
-        span:nth-child(2) {
-          color: #e94235;
-        }
-        span:nth-child(3) {
-          color: #fabb05;
-        }
-        span:nth-child(4) {
-          color: #4285f4;
-        }
-        span:nth-child(5) {
-          color: #34a853;
-        }
-        span:nth-child(6) {
-          color: #e94235;
-        }
-      }
-    }
-  }
-  .header__column:nth-child(2) {
     justify-content: center;
-    form {
-      display: flex;
-      gap: 0.3vw;
-      input {
-        background-color: #121212;
-        width: 50vw;
-        padding: 0 1vw;
-        height: 5vh;
-        font-size: 2.5vh;
-        line-height: 5vh;
-        color: white;
-        border: none;
-        &::placeholder {
-          font-size: 2.5vh;
-          color: rgba(221, 221, 221, 0.5);
+    .header__column {
+        width: 33%;
+        font-size: 4vh;
+        display: flex;
+        align-items: center;
+    }
+    .header__column:first-child {
+        a {
+            color: white;
+            display: flex;
+            align-items: center;
+            i {
+                position: relative;
+                color: #ff0000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                div {
+                    z-index: -1;
+                    position: absolute;
+                    height: 2vh;
+                    width: 2vh;
+                    background-color: white;
+                }
+            }
+            .header__column-title {
+                margin-left: 0.2vw;
+                letter-spacing: -0.2vw;
+                span:first-child {
+                    color: #4285f4;
+                }
+                span:nth-child(2) {
+                    color: #e94235;
+                }
+                span:nth-child(3) {
+                    color: #fabb05;
+                }
+                span:nth-child(4) {
+                    color: #4285f4;
+                }
+                span:nth-child(5) {
+                    color: #34a853;
+                }
+                span:nth-child(6) {
+                    color: #e94235;
+                }
+            }
         }
-      }
-      button {
-        z-index: 1;
-        height: 5vh;
-        width: 7vw;
-        background-color: #313131;
-        border: none;
-        i {
-          display: block;
-          font-size: 2vh;
-          color: rgba(221, 221, 221, 0.5);
-          transition: color 0.1s ease-in-out;
+    }
+    .header__column:nth-child(2) {
+        justify-content: center;
+        form {
+            display: flex;
+            gap: 0.3vw;
+            input {
+                background-color: #121212;
+                width: 50vw;
+                padding: 0 1vw;
+                height: 5vh;
+                font-size: 2.5vh;
+                line-height: 5vh;
+                color: white;
+                border: none;
+                @media screen and (orientation: portrait) {
+                    width: 170px;
+                    transition: width 0.3s ease-in-out;
+                    &:focus {
+                        width: 50vw;
+                        z-index: 1;
+                    }
+                }
+                &::placeholder {
+                    font-size: 2.5vh;
+                    color: rgba(221, 221, 221, 0.5);
+                }
+            }
+            button {
+                z-index: 1;
+                height: 5vh;
+                width: 7vw;
+                background-color: #313131;
+                border: none;
+                i {
+                    display: block;
+                    font-size: 2vh;
+                    color: rgba(221, 221, 221, 0.5);
+                    transition: color 0.1s ease-in-out;
+                }
+                &:hover i {
+                    color: rgba(221, 221, 221, 0.8);
+                }
+            }
         }
-        &:hover i {
-          color: rgba(221, 221, 221, 0.8);
+    }
+    .header__column:last-child {
+        justify-content: flex-end;
+        font-size: 3vh;
+        .header__column-profile {
+            color: white;
+            font-size: 5.5vh;
+            transition: transform 0.1s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
-      }
+        .header__column-logout {
+            margin-left: 3vh;
+            color: rgba(221, 221, 221, 0.5);
+        }
+        .header__column-join {
+            color: lightblue;
+        }
+        .header__column-login {
+            margin-left: 3vh;
+            color: lightblue;
+        }
     }
-  }
-  .header__column:last-child {
-    justify-content: flex-end;
-    font-size: 3vh;
-    .header__column-profile {
-      color: white;
-      font-size: 5.5vh;
-      transition: transform 0.1s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-    .header__column-logout {
-      margin-left: 3vh;
-      color: rgba(221, 221, 221, 0.5);
-    }
-    .header__column-join {
-      color: lightblue;
-    }
-    .header__column-login {
-      margin-left: 3vh;
-      color: lightblue;
-    }
-  }
 }

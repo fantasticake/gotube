@@ -1,70 +1,73 @@
 .search {
-  display: flex;
-  justify-content: center;
-  .search-videos {
-    padding: 7.5vh 5vh;
-    display: grid;
     width: 100%;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-auto-rows: max-content;
-    row-gap: 6vh;
-    .video-container {
-      display: flex;
-      height: 100%;
-      @media (max-width: 800px) {
+    .search-videos {
+        padding: 7.5vh 5vh;
+        width: 100%;
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .video-container__video {
-        max-width: 90vw;
-        object-fit: cover;
-        width: 400px;
-        height: 220px;
-      }
-      .video-container__info-box {
-        word-wrap: break-word;
-        margin-top: 5px;
-        margin-left: 20px;
-        color: rgb(185, 185, 185);
-        .video-container__title {
-          font-size: 25px;
-          color: white;
-        }
-        .video-container__views-date-box {
-          display: flex;
-          gap: 5px;
-          margin-top: 5px;
-        }
-        .video-container__creator-text-box {
-          display: flex;
-          flex-direction: column;
-          .video-container__creator {
-            margin-top: 15px;
+        row-gap: 6vh;
+        .video-container {
             display: flex;
-            align-items: center;
-            .video-container__creator-avatar {
-              object-fit: cover;
-              width: 30px;
-              height: 30px;
-              border-radius: 15px;
+            .video-container__video {
+                max-width: 90vw;
+                object-fit: cover;
+                width: 400px;
+                height: 220px;
             }
-            .video-container__creator-name {
-              color: rgb(185, 185, 185);
-              margin-left: 10px;
-              &:hover {
-                color: white;
-              }
+            .video-container__info-box {
+                word-wrap: break-word;
+                margin-top: 5px;
+                margin-left: 20px;
+                color: rgb(185, 185, 185);
+                .video-container__title {
+                    font-size: 25px;
+                    color: white;
+                }
+                .video-container__views-date-box {
+                    display: flex;
+                    gap: 5px;
+                    margin-top: 5px;
+                }
+                .video-container__creator-text-box {
+                    display: flex;
+                    flex-direction: column;
+                    .video-container__creator {
+                        margin-top: 15px;
+                        display: flex;
+                        align-items: center;
+                        .video-container__creator-avatar {
+                            object-fit: cover;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 15px;
+                        }
+                        .video-container__creator-name {
+                            color: rgb(185, 185, 185);
+                            margin-left: 10px;
+                            &:hover {
+                                color: white;
+                            }
+                        }
+                    }
+                    .video-container__text_box {
+                        margin-top: 20px;
+                        .video-container__description {
+                        }
+                    }
+                }
             }
-          }
-          .video-container__text_box {
-            margin-top: 20px;
-            .video-container__description {
-            }
-          }
         }
-      }
+        @media (max-width: 800px) {
+            align-items: center;
+            .video-container {
+                max-width: 90vw;
+                width: 380px;
+                flex-direction: column;
+                text-align: center;
+                .video-container__video {
+                    width: 100%;
+                }
+            }
+        }
     }
-  }
 }

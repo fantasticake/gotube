@@ -28,7 +28,7 @@ mixin searchVideoBlock(video)
         a(href="/videos"+routes.videoDetail(video.id))
             video(src="/"+video.path).video-container__video.hover-play
         .video-container__info-box
-            a(href="/videos"+routes.videoDetail(video.id)).video-container__title=video.title
+            a(href="/videos"+routes.videoDetail(video.id)).video-container__title #{video.title.slice(0, 60)}
             .video-container__views-date-box
                 span.video-container__views=video.views
                     if video.views == 1

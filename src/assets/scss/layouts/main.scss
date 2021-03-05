@@ -1,22 +1,24 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button {
-  outline: none;
+    outline: none;
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background-color: #202020;
-  color: white;
-  main {
-    height: 100%;
-    margin-top: $header-height;
-  }
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #202020;
+    color: white;
+    main {
+        height: 100%;
+        width: 100%;
+        margin-top: $header-height;
+    }
 }
