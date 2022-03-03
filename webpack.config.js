@@ -3,8 +3,8 @@ const ExtractCSS = require("mini-css-extract-plugin");
 const autoPrefixer = require("autoprefixer");
 
 const MODE = process.env.WEBPACK_ENV;
-const ENTRY_FILE = path.join(__dirname, "assets", "js", "main.js");
-const OUTPUT_DIR = path.join(__dirname, "static");
+const ENTRY_FILE = path.join(__dirname, "src", "assets", "js", "main.js");
+const OUTPUT_DIR = path.join(__dirname, "src", "static");
 
 const config = {
   plugins: [new ExtractCSS()],

@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-
-dotenv.config();
+require("dotenv").config();
+import "./models/Video";
+import "./models/Comment";
+import "./models/User";
 
 mongoose.connect(
   process.env.PRODUCTION ? process.env.MONGO_URL_PROD : process.env.MONGO_URL,
   {
     useNewUrlParser: true,
-    useFindAndModify: false,
     useUnifiedTopology: true,
   }
 );

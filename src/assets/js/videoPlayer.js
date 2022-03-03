@@ -15,6 +15,7 @@ const handleEnded = (event) => {
 
 const init = () => {
   const video = videoContainer.querySelector(".video-container__video");
+  video.volume = 0.5;
   video.addEventListener("ended", handleEnded);
 };
 

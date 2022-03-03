@@ -1,3 +1,4 @@
+require("dotenv").config();
 import express from "express";
 import session from "express-session";
 import MongoStore from "connect-mongo";
@@ -14,10 +15,6 @@ import apiRouter from "./routers/apiRouter";
 import routes from "./routes";
 import { localsMiddleware } from "./middlewares";
 import path from "path";
-import dotenv from "dotenv";
-
-dotenv.config();
-
 import "./passport";
 
 const app = express();

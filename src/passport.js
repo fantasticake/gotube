@@ -1,17 +1,15 @@
+require("dotenv").config();
 import passport from "passport";
 import GitHubStrategy from "passport-github2";
 import FacebookStrategy from "passport-facebook";
 import googleStrategy from "passport-google-oauth20";
 import User from "./models/User";
-import dotenv from "dotenv";
 import routes from "./routes";
 import {
   facebookAuthenticate,
   githubAuthenticate,
   googleAuthenticate,
 } from "./controllers/globalController";
-
-dotenv.config();
 
 passport.use(User.createStrategy());
 
